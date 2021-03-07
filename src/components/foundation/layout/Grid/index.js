@@ -7,17 +7,13 @@ const Container = styled.div`
   padding: 18px 16px 32px;
   margin-right: auto;
   margin-left: auto;
-  
+
   ${breakpointsMedia({
     xs: css`
       max-width: initial;
-      padding-right: 28px;
-      padding-left: 28px;
     `,
     md: css`
       max-width: 768px;
-      padding-right: 16px;
-      padding-left: 16px; 
     `,
   })}
 `;
