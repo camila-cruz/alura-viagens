@@ -13,6 +13,10 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  body {
+    background-color: ${theme.colors.primary};
+  }
+
 `;
 
 // eslint-disable-next-line react/prop-types
