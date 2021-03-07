@@ -18,7 +18,8 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title>Alura Viagens</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Pattaya:wght@400&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
