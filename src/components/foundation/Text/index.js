@@ -2,20 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const TextStyleVariantsMap = {
-  header: ({ theme }) => theme.typographyVariants.header,
-  subheader: ({ theme }) => theme.typographyVariants.subheader,
-  label: ({ theme }) => theme.typographyVariants.label,
-  inputText: ({ theme }) => theme.typographyVariants.inputText,
-  radioText: ({ theme }) => theme.typographyVariants.radioText,
-  buttonText: ({ theme }) => theme.typographyVariants.buttonText,
-};
-
 const TextBase = styled.span`
-  font-family: ${(props) => TextStyleVariantsMap[props.variant].fontFamily};
-  font-size: ${(props) => TextStyleVariantsMap[props.variant].fontSize};
-  font-weight: ${(props) => TextStyleVariantsMap[props.variant].fontWeight};
-  line-height: ${(props) => TextStyleVariantsMap[props.variant].lineHeight};
+  font-family: ${(props) => props.theme.typographyVariants[props.variant].fontFamily};
+  font-size: ${(props) => props.theme.typographyVariants[props.variant].fontSize};
+  font-weight: ${(props) => props.theme.typographyVariants[props.variant].fontWeight};
+  line-height: ${(props) => props.theme.typographyVariants[props.variant].lineHeight};
 `;
 
 export default function Text({ tag, variant, children }) {
