@@ -20,7 +20,7 @@ const typographyVariants = {
     fontSize: '72px',
     fontWeight: '400',
     lineHeight: 1.25,
-    fontFamily: fontFamily.text,
+    fontFamily: fontFamily.title,
   },
   subheader: {
     fontSize: '24px',
