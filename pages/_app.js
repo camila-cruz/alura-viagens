@@ -1,14 +1,18 @@
 import React from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Head from 'next/head';
+import { normalize } from 'styled-normalize';
 import theme from '../src/theme';
 
 const GlobalStyle = createGlobalStyle`
-  body {
+  ${normalize}
+    
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+
 `;
 
 // eslint-disable-next-line react/prop-types
