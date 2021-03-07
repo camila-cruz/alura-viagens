@@ -3,8 +3,7 @@ import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
 import { propToStyle } from '../../../../theme/utils/propToStyle';
 
 const Container = styled.div`
-  width: 350px;
-  max-width: 900px;
+  width: 100%;
   padding: 18px 16px 32px;
   margin-right: auto;
   margin-left: auto;
