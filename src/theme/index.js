@@ -2,6 +2,7 @@ const colors = {
   background: '#FFFFFF',
   primary: '#35B6FF',
   secondary: '#000000',
+  tertiary: '#FFFFFF',
 };
 
 const fontFamily = {
@@ -62,7 +63,7 @@ const typographyVariants = {
     fontWeight: '700',
     lineHeight: 1,
     fontFamily: fontFamily.text,
-    color: colors.secondary,
+    color: colors.tertiary,
   },
 };
 
