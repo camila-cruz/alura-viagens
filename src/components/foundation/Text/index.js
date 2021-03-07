@@ -1,10 +1,27 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
+import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 
 const TextBase = styled.span`
+  ${(props) => {
+    if (typeof props.theme.typographyVariants[props.variant].fontSize === 'string') {
+      return css`
+        font-size: ${props.theme.typographyVariants[props.variant].fontSize};
+      `;
+    }
+
+    return breakpointsMedia({
+      xs: css`
+        font-size: ${props.theme.typographyVariants[props.variant].fontSize.xs};
+      `,
+      md: css`
+        font-size: ${props.theme.typographyVariants[props.variant].fontSize.md};
+      `,
+    });
+  }}
+  
   font-family: ${(props) => props.theme.typographyVariants[props.variant].fontFamily};
-  font-size: ${(props) => props.theme.typographyVariants[props.variant].fontSize};
   font-weight: ${(props) => props.theme.typographyVariants[props.variant].fontWeight};
   line-height: ${(props) => props.theme.typographyVariants[props.variant].lineHeight};
   color: ${(props) => props.theme.typographyVariants[props.variant].color};

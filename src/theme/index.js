@@ -16,15 +16,11 @@ const breakpoints = {
 };
 
 const typographyVariants = {
-  headerXS: {
-    fontSize: '36px',
-    fontWeight: '400',
-    lineHeight: 1.25,
-    fontFamily: fontFamily.title,
-    color: colors.primary,
-  },
-  headerMD: {
-    fontSize: '72px',
+  header: {
+    fontSize: {
+      xs: '36px',
+      md: '72px',
+    },
     fontWeight: '400',
     lineHeight: 1.25,
     fontFamily: fontFamily.title,
