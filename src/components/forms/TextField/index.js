@@ -1,10 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import Text from '../../foundation/Text';
+import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 
 const InputWrapper = styled.div`
-  margin-bottom: 16px;
+  ${breakpointsMedia({
+    xs: css`
+      margin-bottom: 16px;
+    `,
+    md: css`
+      margin-bottom: 32px;
+    `,
+  })}
 `;
 
 const Input = styled(Text)`

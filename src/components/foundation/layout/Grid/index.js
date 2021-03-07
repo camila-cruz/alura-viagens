@@ -7,17 +7,13 @@ const Container = styled.div`
   padding: 18px 16px 32px;
   margin-right: auto;
   margin-left: auto;
-  
+
   ${breakpointsMedia({
     xs: css`
       max-width: initial;
-      padding-right: 28px;
-      padding-left: 28px;
     `,
     md: css`
       max-width: 768px;
-      padding-right: 16px;
-      padding-left: 16px; 
     `,
   })}
 `;
@@ -26,6 +22,7 @@ const Col = styled.div`
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
+
   ${({ value }) => {
     if (typeof value === 'number') {
       return css`
@@ -44,6 +41,14 @@ const Col = styled.div`
         md: css`
           flex: 0 0 ${(100 * value.md) / 12}%;
           max-width: ${(100 * value.md) / 12}%;
+
+          &:first-child {
+            padding-right: 10px;
+          }
+
+          & + & {
+            padding-left: 10px;
+          }
         `,
       }),
     });
@@ -72,6 +77,7 @@ const Col = styled.div`
   ${propToStyle('alignItems')}
   ${propToStyle('justifyContent')}
   ${propToStyle('paddingRight')}
+  ${propToStyle('paddingLeft')}
 `;
 
 Col.defaultProps = {

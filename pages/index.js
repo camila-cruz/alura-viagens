@@ -12,8 +12,19 @@ export default function Home() {
       margin="auto"
       width="93%"
       maxWidth="900px"
+      paddingLeft={{ xs: '28px', md: '16px' }}
+      paddingRight={{ xs: '28px', md: '16px' }}
+      paddingTop="16px"
+      paddingBottom={{ xs: '32px', md: '54px' }}
     >
-      <Header>Alura Viagens</Header>
+      <Header
+        width="100%"
+        maxWidth="768px"
+        margin="auto"
+        paddingLeft="0px"
+      >
+        Alura Viagens
+      </Header>
       <Form />
     </Box>
   );

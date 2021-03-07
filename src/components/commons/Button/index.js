@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 import Text from '../../foundation/Text';
 
 export const Button = styled(Text)`
@@ -21,6 +22,15 @@ export const Button = styled(Text)`
   &:focus {
     box-shadow: 0 0 3pt 2pt #004871;
   }
+
+  ${breakpointsMedia({
+    xs: css`
+      margin-top: 16px;
+    `,
+    md: css`
+      margin-top: 0px;
+    `,
+  })}
 `;
 
 Button.defaultProps = {
