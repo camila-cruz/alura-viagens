@@ -21,6 +21,7 @@ export default function Home() {
         width="100%"
         maxWidth="768px"
         margin="auto"
+        paddingLeft="0px"
       >
         Alura Viagens
       </Header>

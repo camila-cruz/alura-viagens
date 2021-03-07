@@ -32,6 +32,10 @@ const typographyVariants = {
     lineHeight: 1.25,
     fontFamily: fontFamily.text,
     color: colors.secondary,
+    paddingLeft: {
+      xs: '0px',
+      md: '8px',
+    },
   },
   label: {
     fontSize: '18px',
@@ -39,6 +43,10 @@ const typographyVariants = {
     lineHeight: 1.25,
     fontFamily: fontFamily.text,
     color: colors.secondary,
+    paddingLeft: {
+      xs: '0px',
+      md: '8px',
+    },
   },
   inputText: {
     fontSize: '18px',

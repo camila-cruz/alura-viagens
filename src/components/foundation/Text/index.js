@@ -25,6 +25,20 @@ const TextBase = styled.span`
   font-weight: ${(props) => props.theme.typographyVariants[props.variant].fontWeight};
   line-height: ${(props) => props.theme.typographyVariants[props.variant].lineHeight};
   color: ${(props) => props.theme.typographyVariants[props.variant].color};
+
+  ${(props) => {
+    if (props.theme.typographyVariants[props.variant].paddingLeft) {
+      return breakpointsMedia({
+        xs: css`
+          padding-left: ${props.theme.typographyVariants[props.variant].paddingLeft.xs};
+        `,
+        md: css`
+          padding-left: ${props.theme.typographyVariants[props.variant].paddingLeft.md};
+        `,
+      });
+    }
+    return null;
+  }}
 `;
 
 export default function Text({
