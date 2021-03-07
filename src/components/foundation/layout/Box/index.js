@@ -13,6 +13,7 @@ export const Box = styled.div`
   ${propToStyle('width')}
   ${propToStyle('maxWidth')}
   ${propToStyle('paddingLeft')}
-  ${propToStyle('paddingLeft')}
   ${propToStyle('paddingRight')}
+  ${propToStyle('paddingTop')}
+  ${propToStyle('paddingBottom')}
 `;

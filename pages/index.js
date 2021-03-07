@@ -14,6 +14,8 @@ export default function Home() {
       maxWidth="900px"
       paddingLeft={{ xs: '28px', md: '16px' }}
       paddingRight={{ xs: '28px', md: '16px' }}
+      paddingTop="16px"
+      paddingBottom={{ xs: '32px', md: '54px' }}
     >
       <Header
         width="100%"
