@@ -9,6 +9,11 @@ const fontFamily = {
   text: '\'Roboto\', sans-serif',
 };
 
+const breakpoints = {
+  xs: 0,
+  md: 768,
+};
+
 const typographyVariants = {
   headerXS: {
     fontSize: '36px',
@@ -63,6 +68,7 @@ const typographyVariants = {
 
 export default {
   colors,
+  breakpoints,
   fontFamily,
   typographyVariants,
 };
