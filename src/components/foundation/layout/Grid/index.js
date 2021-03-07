@@ -22,6 +22,7 @@ const Col = styled.div`
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
+
   ${({ value }) => {
     if (typeof value === 'number') {
       return css`
@@ -40,6 +41,14 @@ const Col = styled.div`
         md: css`
           flex: 0 0 ${(100 * value.md) / 12}%;
           max-width: ${(100 * value.md) / 12}%;
+
+          &:first-child {
+            padding-right: 10px;
+          }
+
+          & + & {
+            padding-left: 10px;
+          }
         `,
       }),
     });
@@ -68,6 +77,7 @@ const Col = styled.div`
   ${propToStyle('alignItems')}
   ${propToStyle('justifyContent')}
   ${propToStyle('paddingRight')}
+  ${propToStyle('paddingLeft')}
 `;
 
 Col.defaultProps = {
