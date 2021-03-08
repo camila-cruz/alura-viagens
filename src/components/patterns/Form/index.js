@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { Button } from '../../commons/Button';
 import { Header } from '../../commons/Header';
 import { Label } from '../../forms/Label';
+import { RadioInput } from '../../forms/RadioInput';
+import RadioGroup from '../../forms/RadioGroup';
 import TextField from '../../forms/TextField';
 import { Grid } from '../../foundation/layout/Grid';
 
@@ -49,6 +51,37 @@ export default function Form() {
         <Grid.Row>
           <Grid.Col>
             <Header tag="h2" variant="subheader">Como será o pagamento?</Header>
+          </Grid.Col>
+        </Grid.Row>
+
+        <Grid.Row>
+          <Grid.Col>
+            <RadioGroup>
+              <RadioInput
+                image="/images/money.png"
+                alt="Uma nota de dinheiro dentro de um envelope"
+                name="pagamento"
+                id="transfer"
+              >
+                Transferência
+              </RadioInput>
+              <RadioInput
+                image="/images/card.png"
+                alt="A parte de trás de um cartão e a sombra dele"
+                name="pagamento"
+                id="card"
+              >
+                Cartão
+              </RadioInput>
+              <RadioInput
+                image="/images/paypal.png"
+                alt="Duas letras P azuis sobrepostas"
+                name="pagamento"
+                id="paypal"
+              >
+                Paypal
+              </RadioInput>
+            </RadioGroup>
           </Grid.Col>
         </Grid.Row>
 
