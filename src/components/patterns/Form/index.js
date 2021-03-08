@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Button } from '../../commons/Button';
 import { Header } from '../../commons/Header';
@@ -13,6 +13,12 @@ const FormWrapper = styled.form`
 `;
 
 export default function Form() {
+  const [checked, setChecked] = useState('card');
+
+  function handleCheck(id) {
+    setChecked(id);
+  }
+
   return (
     <FormWrapper>
       <Grid.Container>
@@ -62,6 +68,8 @@ export default function Form() {
                 alt="Uma nota de dinheiro dentro de um envelope"
                 name="pagamento"
                 id="transfer"
+                onChange={(e) => handleCheck(e.target.id)}
+                checked={checked === 'transfer'}
               >
                 Transferência
               </RadioInput>
@@ -70,6 +78,8 @@ export default function Form() {
                 alt="A parte de trás de um cartão e a sombra dele"
                 name="pagamento"
                 id="card"
+                onChange={(e) => handleCheck(e.target.id)}
+                checked={checked === 'card'}
               >
                 Cartão
               </RadioInput>
@@ -78,6 +88,8 @@ export default function Form() {
                 alt="Duas letras P azuis sobrepostas"
                 name="pagamento"
                 id="paypal"
+                onChange={(e) => handleCheck(e.target.id)}
+                checked={checked === 'paypal'}
               >
                 Paypal
               </RadioInput>
