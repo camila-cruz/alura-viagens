@@ -1,10 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import Text from '../../foundation/Text';
 
 const Radio = styled.input`
-  display: none;
+  position: absolute;
+  width: 0px;
 `;
 
 const RadioWrapper = styled.label`
@@ -35,9 +36,7 @@ const RadioWrapper = styled.label`
     align-self: center;
   }
 
-  & > ${Radio}:checked {
-    background-color: rgba(211, 234, 255, 0.56);
-  }
+  ${({ checked }) => checked && css`background: rgba(211, 234, 255, 0.56);`}
 `;
 
 export function RadioInput({
@@ -45,12 +44,19 @@ export function RadioInput({
   alt,
   name,
   id,
+  checked,
+  onChange,
   children,
 }) {
   return (
-    <RadioWrapper>
+    <RadioWrapper checked={checked}>
       {/* eslint-disable-next-line no-console */}
-      <Radio type="radio" name={name} id={id} onClick={(e) => console.log(e.target.id)} />
+      <Radio
+        type="radio"
+        name={name}
+        id={id}
+        onChange={onChange}
+      />
       <img src={image} alt={alt} />
       <Text variant="radioText">
         {children}
@@ -59,10 +65,17 @@ export function RadioInput({
   );
 }
 
+RadioInput.defaultProps = {
+  checked: false,
+  onChange: null,
+};
+
 RadioInput.propTypes = {
   image: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  checked: PropTypes.bool,
+  onChange: PropTypes.func,
   children: PropTypes.node.isRequired,
 };
