@@ -33,10 +33,15 @@ Input.defaultProps = {
   variant: 'inputText',
 };
 
-export default function TextField({ placeholder, id, type }) {
+export default function TextField({
+  placeholder,
+  id,
+  type,
+  onChange,
+}) {
   return (
     <InputWrapper>
-      <Input placeholder={placeholder} id={id} type={type} />
+      <Input placeholder={placeholder} id={id} type={type} onChange={onChange} />
     </InputWrapper>
   );
 }
@@ -44,10 +49,12 @@ export default function TextField({ placeholder, id, type }) {
 TextField.defaultProps = {
   placeholder: '',
   type: 'text',
+  onChange: null,
 };
 
 TextField.propTypes = {
   placeholder: PropTypes.string,
   id: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
   type: PropTypes.string,
 };
