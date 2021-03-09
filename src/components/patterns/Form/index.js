@@ -7,6 +7,7 @@ import { RadioInput } from '../../forms/RadioInput';
 import RadioGroup from '../../forms/RadioGroup';
 import TextField from '../../forms/TextField';
 import { Grid } from '../../foundation/layout/Grid';
+import CPFField from '../../forms/CPFField';
 
 const FormWrapper = styled.form`
   
@@ -33,7 +34,7 @@ export default function Form() {
             <Label htmlFor="dataSaida">
               Data de saída
             </Label>
-            <TextField id="dataSaida" />
+            <TextField id="dataSaida" onChange={(e) => e} />
           </Grid.Col>
 
           <Grid.Col value={{ xs: 12, md: 4 }}>
@@ -138,7 +139,7 @@ export default function Form() {
             <Label htmlFor="cpf">
               CPF
             </Label>
-            <TextField id="cpf" />
+            <CPFField id="cpf" placeholder="999.999.999-99" onChange={(e) => e} />
           </Grid.Col>
         </Grid.Row>
 
